@@ -7,9 +7,9 @@
 }
 a {
   color: rgb(11, 235, 11);
-  display:flex;
-  justify-content:center;
-  margin-top:30px;
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
 }
 
 a:hover {
@@ -44,20 +44,15 @@ button:hover {
 button.create-btn {
   background-color: rgb(11, 235, 11);
   color: black;
-  border: solid black 2px;
+  border: solid black 4px;
 }
+
 button.create-btn:hover {
   background-color: black;
   color: rgb(11, 235, 11);
   border: solid rgb(11, 235, 11) 1px;
   font-style: italic;
 }
-
-/* html {
-  background-image: url("Recipe-IMG.jpg");
-  background-size: cover;
-  color: white;
-} */
 
 header h1 {
   text-align: center;
@@ -78,8 +73,6 @@ header {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 
-/* typography */
-
 html {
   font-family: "helvetica neue", sans-serif;
 }
@@ -90,9 +83,7 @@ tfoot th {
 }
 
 tbody tr:nth-child(odd) {
-  /* background-color: #fff0c7; */
   align-items: center;
-  /* border:solid rgb(11, 235, 11); */
 }
 
 th {
@@ -211,7 +202,7 @@ textarea {
 
   tr :nth-child(n + 4):nth-child(-n + 5) {
     width: 90%;
-    padding: 10px;
+    padding: 0px;
     margin: 10px;
   }
 
@@ -234,9 +225,27 @@ textarea {
     width: 30%;
   }
 
+  button:hover {
+    border: solid white;
+    transform:none;
+    font-size:20px;
+  }
+
   table td::before {
     content: attr(data-label);
     float: left;
     text-decoration: underline;
+  }
+
+  a:hover {
+    color: red;
+  }
+
+  button.create-btn:hover {
+    background-color: black;
+    transform: scale(1);
+    color: rgb(11, 235, 11);
+    border: solid rgb(11, 235, 11) 1px;
+    font-style: italic;
   }
 }
