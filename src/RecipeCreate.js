@@ -79,8 +79,8 @@ function RecipeCreate({ addRecipe }) {
                                 onChange={handleChange}
                             />
                         </td>
-                        <td>
-                            <button type="submit">Create</button>
+                        <td id = "New">
+                        <button type="submit" className="create-btn">Add New</button>
                         </td>
                     </tr>
                 </tbody>

@@ -1,103 +1,242 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans|Playfair+Display+SC");
 
 .App {
-    padding: 1em;
+  padding: 1em;
+  /* border:solid white;  */
+  font-weight: bold;
+}
+a {
+  color: rgb(11, 235, 11);
+  display:flex;
+  justify-content:center;
+  margin-top:30px;
 }
 
+a:hover {
+  color: red;
+}
+
+body {
+  background-image: url("Recipe-IMG.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  aspect-ratio: 1;
+  max-width: none;
+  margin: 0;
+}
+
+button {
+  background-color: red;
+  color: white;
+  border: red;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: rgb(0, 8, 255);
+  color: white;
+  font-style: italic;
+  transform: scale(1.5);
+  border: solid white 1px;
+}
+
+button.create-btn {
+  background-color: rgb(11, 235, 11);
+  color: black;
+  border: solid black 2px;
+}
+button.create-btn:hover {
+  background-color: black;
+  color: rgb(11, 235, 11);
+  border: solid rgb(11, 235, 11) 1px;
+  font-style: italic;
+}
+
+/* html {
+  background-image: url("Recipe-IMG.jpg");
+  background-size: cover;
+  color: white;
+} */
+
 header h1 {
-    text-align: center;
-    font-family: "Playfair Display SC";
-    font-size: 64px;
+  text-align: center;
+  font-family: "Playfair Display SC", serif;
+  text-decoration: underline;
+  font-size: 64px;
+  color: rgb(40, 84, 244);
+  margin: 0px;
+  margin-bottom: 15px;
 }
 
 label {
-    display: inline-block;
-    width: 100px;
+  display: inline-block;
+  width: 100px;
 }
 
 header {
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 
 /* typography */
 
 html {
-    font-family: "helvetica neue", sans-serif;
+  font-family: "helvetica neue", sans-serif;
 }
 
 thead th,
 tfoot th {
-    font-family: "Rock Salt";
+  font-family: "Rock Salt";
 }
 
 tbody tr:nth-child(odd) {
-    background-color: #fff0c7;
-    align-items:center;
+  /* background-color: #fff0c7; */
+  align-items: center;
+  /* border:solid rgb(11, 235, 11); */
 }
 
 th {
-    letter-spacing: 2px;
-    padding: 10px;
-    width:10%;
-    align-content:center;
+  letter-spacing: 2px;
+  padding: 10px;
+  width: 10%;
+  align-content: center;
+  border: solid white;
+  text-decoration: underline;
+  font-size: 25px;
 }
- 
+
 td img {
-    object-fit:scale-down;
-    width: 100%;  
+  object-fit: scale-down;
+  width: 100%;
 }
 
 td {
-    letter-spacing: 1px;
-    overflow-x: hidden;
-    overflow-y: hidden;
-    font-size: 14px;
-    padding: 10px;
-    text-align: center;
-    width:10%;
-    
+  letter-spacing: 1px;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  font-size: 17px;
+  padding: 10px;
+  text-align: center;
+  width: 10%;
+  /* border:solid white */
 }
-tbody > tbody tr{
-    display:flex;
-    align-items:center;
-    justify-content:center;
+tr {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* table */
 
 table {
-    table-layout: fixed;
-    width: 100%;
-    border-collapse: collapse;
-    overflow: hidden;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-    align-items: cente;
+  width: 100%;
+  border-collapse: collapse;
+  overflow-x: hidden;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  align-items: center;
+  /* border:solid yellow; */
 }
 
 .content_td p {
-    max-width: 100%;
-    max-height: 100px;
-    overflow-y: auto;
-    text-overflow: ellipsis;
+  max-width: 100%;
+  max-height: 100px;
+  overflow-y: auto;
+  text-overflow: ellipsis;
+  /* border:solid blue; */
 }
-
-tr img {
-    object-fit: scale-down;
-}
-/* Column Size for thead */
-
 /* Column size for tbody */
 tr :nth-child(n + 4):nth-child(-n + 5) {
-    width: 30%;
+  width: 30%;
+  /* border:solid red; */
 }
 
 tr {
-  display:flex;
-    width: 100%;
-    font-size:18px;
+  display: flex;
+  width: 100%;
+  font-size: 18px;
+  border: solid white 2px;
 }
 
 input,
 textarea {
+  width: 100%;
+}
+
+@media only screen and (max-width: 498px) {
+  header h1 {
+    font-size: 32px; /* Reduce the font size */
+  }
+  .content_td p {
+    overflow-y: auto;
+    max-height: 100%;
+  }
+
+  #New {
+    text-align: center;
+  }
+
+  p {
+    margin: 0px;
+  }
+
+  input,
+  textarea {
     width: 100%;
+  }
+
+  table thead {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+
+  tr {
+    display: block;
+    width: 100%;
+    margin-bottom: 40px;
+  }
+
+  td > img {
+    width: 50%;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  tr :nth-child(n + 4):nth-child(-n + 5) {
+    width: 90%;
+    padding: 10px;
+    margin: 10px;
+  }
+
+  th {
+    font-size: 8px;
+  }
+
+  td {
+    display: block;
+    text-align: right;
+    font-size: 90%;
+    width: 90%;
+    letter-spacing: 0px;
+    padding: 15px;
+  }
+
+  button {
+    font-size: 10px;
+    padding: 10px 10px;
+    width: 30%;
+  }
+
+  table td::before {
+    content: attr(data-label);
+    float: left;
+    text-decoration: underline;
+  }
 }
