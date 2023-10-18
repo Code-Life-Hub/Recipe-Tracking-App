@@ -66,7 +66,7 @@ header h1 {
 
 label {
   display: inline-block;
-  width: 100px;
+  width: 250px;
 }
 
 header {
@@ -107,22 +107,28 @@ td {
   overflow-y: hidden;
   font-size: 17px;
   padding: 10px;
-  text-align: left; /* Align to the left */
+  text-align: left;
   width: 10%;
 }
 
 .content_td ol {
-  list-style-type: decimal;
-  padding-left: 20px;
-  margin: 0; /* Remove default margin */
+  padding-left: 0px;
+  margin: 0;
+  display: flex;
+  /* border:solid red; */
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+ol.prepList {
+  list-style-type: decimal !important;
 }
 
 .content_td li {
   display: flex;
   align-items: center;
-  justify-content: flex-start; /* Align to the left */
   padding-bottom: 10px;
-  margin: 0; /* Remove default margin */
+  margin: 0;
 }
 
 .content_td input[type="checkbox"] {
@@ -151,7 +157,7 @@ table {
 }
 
 tr :nth-child(n + 4):nth-child(-n + 5) {
-  width: 30%;
+  width: 45%;
 }
 
 tr {
@@ -165,6 +171,12 @@ input,
 textarea {
   width: 100%;
 }
+
+/* --------------------------------------------------------DESKTOP STYLING ENDS HERE--------------------------------------------------------- */
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------ */
+
+/* --------------------------------------------------------MOBILE STYLING STARTS HERE-------------------------------------------------------- */
 
 @media only screen and (max-width: 498px) {
   header h1 {
@@ -207,10 +219,6 @@ textarea {
     margin-bottom: 40px;
   }
 
-  textarea.ingredients {
-    border: solid red;
-  }
-
   td > img {
     width: 50%;
   }
@@ -221,8 +229,6 @@ textarea {
 
   tr :nth-child(n + 4):nth-child(-n + 5) {
     width: 90%;
-    padding: 0px;
-    margin: 10px;
   }
 
   th {
@@ -313,5 +319,4 @@ textarea {
   td.newCuisine {
     width: 50%;
   }
-
 }
