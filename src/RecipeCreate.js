@@ -32,48 +32,48 @@ function RecipeCreate({ addRecipe }) {
         <form name="create" onSubmit={handleSubmit}>
             <table>
                 <tbody>
-                    <tr>
-                        <td>
+                    <tr className = "createNew">
+                        <td className="newName">
                             <input
                                 name="name"
-                                placeholder="Name"
+                                placeholder="Name of Dish"
                                 value={recipe.name}
                                 required
                                 onChange={handleChange}
                             />
                         </td>
-                        <td>
+                        <td className="newCuisine">
                             <input
                                 name="cuisine"
-                                placeholder="Cuisine"
+                                placeholder="Type of Cuisine"
                                 value={recipe.cuisine}
                                 required
                                 onChange={handleChange}
                             />
                         </td>
-                        <td>
+                        <td className="newUrl">
                             <input
                                 type="url"
                                 name="photo"
-                                placeholder="URL"
+                                placeholder="www.[YourImageUrlHere].com"
                                 value={recipe.photo}
                                 required
                                 onChange={handleChange}
                             />
                         </td>
-                        <td>
+                        <td className="ingredients">
                             <textarea
                                 name="ingredients"
-                                placeholder="Ingredients"
+                                placeholder="Required Ingredients"
                                 value={recipe.ingredients}
                                 required={true}
                                 onChange={handleChange}
                             />
                         </td>
-                        <td>
+                        <td className="preparation">
                             <textarea
                                 name="preparation"
-                                placeholder="Preparation"
+                                placeholder="Steps of Preparation"
                                 value={recipe.preperation}
                                 required
                                 onChange={handleChange}

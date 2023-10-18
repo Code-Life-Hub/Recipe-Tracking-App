@@ -34,6 +34,7 @@ const RecipeData = [
       "https://www.foodista.com/sites/default/files/styles/recype/public/017.jpg",
     ingredients: [
       "3 ripe avocados",
+      "Juice from 1-2 Limes",
       "¾ cup finely chopped Roma tomato",
       "2 serrano chiles very finely chopped (seeded and deveined)",
       "3 heaping tablespoons of finely chopped onion",

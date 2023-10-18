@@ -11,6 +11,8 @@ function RecipeList({ recipes, deleteRecipe }) {
             <img src={recipe.photo} alt={recipe.name} />
           </td>
           <td data-label="Ingredients:" className="content_td">
+            
+            <br></br>
             <ol>
               {Array.isArray(recipe.ingredients) &&
                 recipe.ingredients.map((ingredient, i) => (
@@ -24,6 +26,7 @@ function RecipeList({ recipes, deleteRecipe }) {
             </ol>
           </td>
           <td data-label="Preparation:" className="content_td">
+            <br></br>
             <ol>
               {Array.isArray(recipe.preparation) &&
                 recipe.preparation.map((step, i) => (

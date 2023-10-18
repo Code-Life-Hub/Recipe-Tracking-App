@@ -2,9 +2,9 @@
 
 .App {
   padding: 1em;
-  /* border:solid white;  */
   font-weight: bold;
 }
+
 a {
   color: rgb(11, 235, 11);
   display: flex;
@@ -107,19 +107,22 @@ td {
   overflow-y: hidden;
   font-size: 17px;
   padding: 10px;
-  text-align: center;
+  text-align: left; /* Align to the left */
   width: 10%;
-  /* border:solid white */
 }
 
 .content_td ol {
   list-style-type: decimal;
   padding-left: 20px;
+  margin: 0; /* Remove default margin */
 }
 
 .content_td li {
   display: flex;
   align-items: center;
+  justify-content: flex-start; /* Align to the left */
+  padding-bottom: 10px;
+  margin: 0; /* Remove default margin */
 }
 
 .content_td input[type="checkbox"] {
@@ -132,15 +135,12 @@ tr {
   justify-content: center;
 }
 
-/* table */
-
 table {
   width: 100%;
   border-collapse: collapse;
   overflow-x: hidden;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
   align-items: center;
-  /* border:solid yellow; */
 }
 
 .content_td p {
@@ -148,12 +148,10 @@ table {
   max-height: 100px;
   overflow-y: auto;
   text-overflow: ellipsis;
-  /* border:solid blue; */
 }
-/* Column size for tbody */
+
 tr :nth-child(n + 4):nth-child(-n + 5) {
   width: 30%;
-  /* border:solid red; */
 }
 
 tr {
@@ -170,24 +168,26 @@ textarea {
 
 @media only screen and (max-width: 498px) {
   header h1 {
-    font-size: 32px; /* Reduce the font size */
+    font-size: 32px;
   }
-  .content_td p {
-    overflow-y: auto;
-    max-height: 100%;
+
+  td.content_td[data-label="Ingredients:"] {
+    /* border:solid red; */
+    text-align: left;
+  }
+
+  td.content_td[data-label="Preparation:"] {
+    /* border:solid red; */
+    text-align: left;
   }
 
   #New {
     text-align: center;
   }
 
-  p {
-    margin: 0px;
-  }
-
   input,
   textarea {
-    width: 100%;
+    width: 50%;
   }
 
   table thead {
@@ -205,6 +205,10 @@ textarea {
     display: block;
     width: 100%;
     margin-bottom: 40px;
+  }
+
+  textarea.ingredients {
+    border: solid red;
   }
 
   td > img {
@@ -242,12 +246,14 @@ textarea {
   .content_td li {
     display: flex;
     align-items: center;
-    font-size: 80%;
+    padding-top: 5px;
+    padding-bottom: 1px;
   }
 
   .content_td input[type="checkbox"] {
-    margin-right: 5px;
+    margin-right: 10px;
     transform: scale(0.8);
+    width: auto;
   }
 
   button {
@@ -279,4 +285,33 @@ textarea {
     border: solid rgb(11, 235, 11) 1px;
     font-style: italic;
   }
+
+  td.ingredients textarea {
+    width: 65%;
+    height: 100px;
+  }
+
+  td.preparation textarea {
+    height: 100px;
+    width: 72%;
+  }
+
+  tr.createNew {
+    display: flex;
+    flex-direction: column;
+  }
+
+  tr.createNew td {
+    text-align: left;
+    align-self: flex-start;
+  }
+
+  td.newName {
+    width: 50%;
+  }
+
+  td.newCuisine {
+    width: 50%;
+  }
+
 }
