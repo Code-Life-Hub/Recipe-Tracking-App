@@ -120,8 +120,6 @@ td {
   align-items: flex-start;
 }
 
-
-
 .content_td li {
   display: flex;
   align-items: center;
@@ -179,7 +177,6 @@ textarea {
 /* --------------------------------------------------------MOBILE STYLING STARTS HERE-------------------------------------------------------- */
 
 @media only screen and (max-width: 498px) {
-
   header h1 {
     font-size: 32px;
   }
@@ -218,7 +215,7 @@ textarea {
 
   tr {
     display: block;
-    width: 100%;
+    width: 98%;
     margin-bottom: 40px;
   }
 
@@ -227,7 +224,7 @@ textarea {
   }
 
   table {
-    width: 100%;
+    width: 98%;
   }
 
   tr :nth-child(n + 4):nth-child(-n + 5) {
@@ -253,8 +250,6 @@ textarea {
     font-weight: bold;
     text-decoration: underline;
   }
-
-  
 
   .content_td li {
     display: flex;
