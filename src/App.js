@@ -21,7 +21,7 @@ function App() {
     <div className="App">
       <div className="title">
         <header>
-          <h1 className="header-title">Recipe Tracker</h1>
+          <h1 className="header-title">Recipes with Ease</h1>
         </header>
       </div>
       <table>
