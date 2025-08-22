@@ -1,6 +1,6 @@
 {
-  "short_name": "Recipes with Ease",
-  "name": "Recipes with Ease",
+  "short_name": "Recipe Tracker",
+  "name": "Create React App Sample",
   "start_url": ".",
   "display": "standalone",
   "theme_color": "#000000",
